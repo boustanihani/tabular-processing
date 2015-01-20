@@ -24,7 +24,12 @@ if (Meteor.isClient) {
 
     // https://datatables.net/reference/event/processing
     $(window).on('processing.dt', function(e, settings, proc) {
-        console.log('processing.dt=' + proc);
+        console.log(new Date() + ' processing.dt=' + proc);
+        if (proc) {
+            console.time('processing.dt=true');
+        } else {
+            console.timeEnd('processing.dt=true');
+        }
         Session.set('processing', proc);
     });
 

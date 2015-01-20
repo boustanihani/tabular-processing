@@ -6,5 +6,5 @@
 
 meteor-platform
 insecure
-aldeed:tabular@=0.2.3
 twbs:bootstrap
+aldeed:tabular@=0.2.3
